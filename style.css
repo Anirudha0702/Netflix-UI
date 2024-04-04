@@ -1,0 +1,126 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    line-height: 1.6;
+}
+input,select,button{
+    outline: none;
+    border: none;
+}
+input:hover,select:hover{
+    outline: none;
+}
+.hero-wrapper{
+    height: 100svh;
+    position: relative;
+    border-bottom: 8px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+.hero-wrapper::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000029;
+}
+
+.hero-wrapper img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.navbar{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 3rem;
+    z-index: 1000;
+    max-width: 60rem;
+    transform: translateX(-50%);
+    padding-inline: 1rem;
+    display: flex;
+    align-items: center;
+}
+.navbar::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000ad;
+}
+.navbar img{
+    height: 100%;
+    width: 7rem;
+    object-fit: contain;
+}
+
+.navbar  .item-wrapper{
+    right:1rem;
+    position: absolute;
+    display: flex;
+    gap:0.5rem;
+}
+.navbar .item-wrapper select{
+    background: transparent;
+    color: #fff;
+    border: 1px solid #333;
+    text-decoration: none;
+    
+}
+option{
+    background-color: #ffffff;
+    color: #000000;
+    padding: 0.5rem;
+
+}
+
+.text-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+    gap: 0.5rem;
+    text-align: center;
+    padding-inline: 1rem;
+}
+.text-content h1{
+    font-size: 2rem;
+}
+.text-content span{
+    font-size: 1.2rem;
+}
+.text-content button{
+    padding: 0.5rem 1rem;
+    background-color: #ff0000;
+    color: #fff;
+    width: 20rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+
+    
+    cursor: pointer;
+}
+@media (max-width: 768px){
+    .hero-wrapper{
+        height: 80svh;
+    }
+}
